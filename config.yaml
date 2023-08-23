@@ -1,0 +1,72 @@
+baseURL: "https://tryphaniel.github.io/portfol/" # todo: change site url.
+title: TRYPH 
+description: ARTWORKS 
+defaultContentLanguage: 'en'
+theme: eternity
+googleAnalytics: '' # todo: set your analytics id.
+
+params:
+  image: /images/banner.png
+  logo: logo.png # todo: add your custom logo to static/
+  subtitle: ARTWORKS # todo: change default subtitle for your website.
+  copyright: All rights reserved. # todo: set your copyright type.
+  author: Tryphena Ramos # todo: set your full name.
+  dontShowSource: false # please, do not do this :)
+  dontShowLogo: false
+  portfolio:
+    columns:
+      desktop:
+        illustrations: 6
+        default: 3
+      mobile:
+        default: 2
+        archive: 3
+        people: 1
+  socials:
+    # todo: change these links.
+    - icon: 'far fa-envelope fa-lg'
+      url: 'mailto:tryphenaramos@gmail.com'
+      landing: true
+    - icon: 'fas fa-mug-hot ko-fi'
+      url: 'https://ko-fi.com/tryph'
+      landing: true
+    - icon: 'fab fa-instagram fa-lg'
+      url: 'https://instagram.com/edenwrought'
+    - icon: 'fa-brands fa-twitter'
+      url: 'https://twitter.com/eldwitch'
+      landing: true
+  homepage: /tags/illustration # homepage link, mostly same with menu.main[0]
+  specialPages:
+    - about
+    - projects
+    #- archive
+  bypassWelcomePage: true # redirects "/" to "homepage" when it's true.
+  plausible: '' # todo: set your plausible id.
+  disableWelcomePageBackground: false # disables the background image on the homepage
+  disableRadius: false
+  moveIt: false # Moves Title and Meta info down, only visible when scroll.
+  disableAlwaysResize: false
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
+
+taxonomies:
+  tag: tags
+
+permalinks:
+  illustration: ":filename/"
+
+menu:
+  main:
+    - name: illustration
+      url: /tags/illustration/
+      weight: 1
+    - name: projects
+      url: /projects/
+      weight: 2
+    - name: about
+      url: /about/
+      weight: 3
