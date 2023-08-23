@@ -2,7 +2,7 @@ baseURL: "https://tryphaniel.github.io/portfol/" # todo: change site url.
 title: TRYPH 
 description: ARTWORKS 
 defaultContentLanguage: 'en'
-theme: eternity
+theme: github.com/boratanrikulu/eternity
 googleAnalytics: '' # todo: set your analytics id.
 
 params:
